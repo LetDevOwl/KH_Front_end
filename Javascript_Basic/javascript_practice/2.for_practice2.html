@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 실습</title>
+    <style>
+        table {
+            border: 1px solid #CCC;
+            display: inline-block;
+            margin: 20px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        table td {
+            display: block;
+            border-top: 1px dashed black;
+        }
+
+        table th,
+        td {
+            padding: 5px 10px 5px 10px;
+        }
+
+        table td:first-child {
+            border-top: 1px solid #CCC;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        for (var i = 1; i < 10; i++) {
+            document.write("<table>");
+            document.write("<tr>");
+            document.write("<th>" + i + "단</th>");
+            document.write("</tr>");
+            for (var j = 1; j < 10; j++) {
+                document.write("<td>");
+                document.write(i + " * " + j + " = " + j * i + "<br>");
+                document.write("</td>");
+            }
+            document.write("</table>");
+        }
+    </script>
+</body>
+
+</html>

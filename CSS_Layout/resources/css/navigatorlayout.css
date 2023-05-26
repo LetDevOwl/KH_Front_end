@@ -1,0 +1,52 @@
+#header {
+  height: 100px;
+  background-color: black;
+}
+#header-layer1 {
+  height: 100%;
+  width: 25%;
+  background-color: red;
+  float: left;
+}
+#header-layer2 {
+  height: 100%;
+  width: 50%;
+  background-color: green;
+  float: left;
+}
+#header-layer3 {
+  height: 100%;
+  width: 25%;
+  background-color: yellow;
+  float: left;
+}
+#nav {
+  height: 50px;
+  background-color: antiquewhite;
+}
+#main {
+  height: 500px;
+  background-color: aqua;
+}
+#main-layer1 {
+  height: 100%;
+  width: 15%;
+  background-color: aliceblue;
+  float: left;
+}
+#main-layer2 {
+  height: 100%;
+  width: 65%;
+  background-color: aqua;
+  float: left;
+}
+#main-layer3 {
+  height: 100%;
+  width: 20%;
+  background-color: brown;
+  float: left;
+}
+#footer {
+  height: 100px;
+  background-color: aquamarine;
+}
