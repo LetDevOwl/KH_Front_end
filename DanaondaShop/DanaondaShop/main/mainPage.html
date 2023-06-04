@@ -1,0 +1,213 @@
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>다나온다 숍</title>
+    <link rel="stylesheet" href="./css/mainPageCss.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header">
+                <div class="category">
+                    <img src="../../src/asset/icon/item/icon.svg" />
+                </div>
+                <div class="logoImg">
+                    <img src="../../src/asset/icon/computet_icon.png" />
+                </div>
+                <div class="title">DANAONDA SHOP</div>
+                <div class="login_register_box">
+                    <div class="login">로그인</div>
+                    <div class="vertical_devider"></div>
+                    <div class="register">회원가입</div>
+                </div>
+            </div>
+
+            <div class="banner_box">
+                <div class="banner_contents">
+                    <div class="banner">
+                        <div class="banner_information_box">
+                            <div class="banner_title">title</div>
+                            <div class="banner_description">description</div>
+                        </div>
+                        <div class="image"></div>
+                    </div>
+                    <div class="bullet_list">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main_contents_box">
+                <div class="array">
+                    <div class="item">
+                        <div class="thumbnail">
+                            <img src="" />
+                        </div>
+                        <div class="product_information">
+                            <div class="name">상품이름: 상품이름</div>
+                            <div class="description">상품설명: 상품설명</div>
+                            <div class="amount">상품가격: 100,000</div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="thumbnail">
+                            <img src="" />
+                        </div>
+                        <div class="product_information">
+                            <div class="name">상품이름: 상품이름</div>
+                            <div class="description">상품설명: 상품설명</div>
+                            <div class="amount">상품가격: 100,000</div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="thumbnail">
+                            <img src="" />
+                        </div>
+                        <div class="product_information">
+                            <div class="name">상품이름: 상품이름</div>
+                            <div class="description">상품설명: 상품설명</div>
+                            <div class="amount">상품가격: 100,000</div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="thumbnail">
+                            <img src="" />
+                        </div>
+                        <div class="product_information">
+                            <div class="name">상품이름: 상품이름</div>
+                            <div class="description">상품설명: 상품설명</div>
+                            <div class="amount">상품가격: 100,000</div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="thumbnail">
+                            <img src="" />
+                        </div>
+                        <div class="product_information">
+                            <div class="name">상품이름: 상품이름</div>
+                            <div class="description">상품설명: 상품설명</div>
+                            <div class="amount">상품가격: 100,000</div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="thumbnail">
+                            <img src="" />
+                        </div>
+                        <div class="product_information">
+                            <div class="name">상품이름: 상품이름</div>
+                            <div class="description">상품설명: 상품설명</div>
+                            <div class="amount">상품가격: 100,000</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixed_bar"></div>
+            </div>
+        </header>
+
+        <main>
+            <!-- 배너 -->
+            <div></div>
+            <!-- 메인 컨텐츠 -->
+            <div>
+                <!-- 최신 상품목록 -->
+                <div>
+                    <div></div>
+                </div>
+                <!-- 사이드바 -->
+                <div>
+                    <div></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div></div>
+        </footer>
+    </div>
+</body>
+
+<script>
+    const cardArray = [
+        {
+            img: null,
+            name: 'name',
+            description: 'description',
+            amount: 100000,
+        },
+        {
+            img: null,
+            name: 'name',
+            description: 'description',
+            amount: 100000,
+        },
+        {
+            img: null,
+            name: 'name',
+            description: 'description',
+            amount: 100000,
+        },
+        {
+            img: null,
+            name: 'name',
+            description: 'description',
+            amount: 100000,
+        },
+        {
+            img: null,
+            name: 'name',
+            description: 'description',
+            amount: 100000,
+        },
+        {
+            img: null,
+            name: 'name',
+            description: 'description',
+            amount: 100000,
+        },
+    ]
+
+    // function showArray() {
+    //   cardArray.map((item, idx) => (
+    //     <div class={`item_${idx}`}>
+    //       <div class='thumbnail'>
+    //         <img src='' />
+    //       </div>
+    //       <div class='product_information'>
+    //         <div class='name'>{`${item.name}_${idx}`}</div>
+    //         <div class='description'>{`${item.description}_${idx}`}</div>
+    //         <div class='amount'>{`${item.amount.toLocaleString()}`}</div>
+    //       </div>
+    //     </div>
+    //   ))
+    // }
+
+    const hw = document.getElementsByClassName('array')
+    hw.onload = function () {
+        debugger
+        cardArray.map((item, idx) => (
+            <div class={`item_${idx}`}>
+                <div class='thumbnail'>
+                    <img src='' />
+                </div>
+                <div class='product_information'>
+                    <div class='name'>{`${item.name}_${idx}`}</div>
+                    <div class='description'>{`${item.description}_${idx}`}</div>
+                    <div class='amount'>{`${item.amount.toLocaleString()}`}</div>
+                </div>
+            </div>
+        ))
+    }
+</script>
+
+</html>
