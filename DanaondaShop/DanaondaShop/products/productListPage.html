@@ -1,191 +1,192 @@
 <!DOCTYPE html>
 <html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>상품 리스트</title>
+        <link rel="stylesheet" href="./css/productListPageCss.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>상품 리스트</title>
-    <link rel="stylesheet" href="./css/productListPageCss.css">
-</head>
-
-<body>
-    <header>
-        <div class="header">
-            <div class="category">
-                <details>
-                    <summary></summary>
-                    <ul>
-                        <li><a href="#">
-                                <h3>PC주요부품</h3>
-                            </a></li>
-                        <li><a href="#">
-                                <h3>PC저장장치</h3>
-                            </a></li>
-                        <li><a href="#">
-                                <h3>모니터/사운드</h3>
-                            </a></li>
-                        <li><a href="#">
-                                <h3>PC주변기기</h3>
-                            </a></li>
-                        <li><a href="#">
-                                <h3>복합기/프린터/소프트웨어</h3>
-                            </a></li>
-
-                    </ul>
-                </details>
-                <!-- <img src="../../src/asset/icon/item/icon.svg" /> -->
-            </div>
-            <div class="logoImg">
-                <img src="../../src/asset/icon/computet_icon.png" />
-            </div>
-            <div class="title">DANAONDA SHOP</div>
-            <div class="login_register_box">
-                <a href="../register/loginPage.html" class="login">로그인</a>
-                <div class="vertical_devider"></div>
-                <a href="../register/register.html" class="login">회원가입</a>
-            </div>
-        </div>
-    </header>
-    <hr>
-    <main>
-        <div class="navBar">
-            <div class="search_sortDiv_navBox"></div>
-            <div class="search_sortDiv">
-                <div class="searchItemBox">
-                    <input type="button" value="searchBtn">
-                    <input type="search" name="" id="searchItem">
+    <body>
+        <header>
+            <div class="header">
+                <div class="category">
+                    <details>
+                        <summary></summary>
+                        <ul>
+                            <li>
+                                <a href="../products/productListPage.html">
+                                    <h3>PC주요부품</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../products/productListPage.html">
+                                    <h3>PC저장장치</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../products/productListPage.html">
+                                    <h3>모니터/사운드</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../products/productListPage.html">
+                                    <h3>PC주변기기</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../products/productListPage.html">
+                                    <h3>복합기/프린터/소프트웨어</h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </details>
+                    <!-- <img src="../../src/asset/icon/item/icon.svg" /> -->
                 </div>
-                <div class="sortOptionBox">
-                    <select name="" id="sort">
-                        <option value="newest">최신순</option>
-                        <option value="price">가격순</option>
-                        <option value="favorite">인기순</option>
-                    </select>
+                <div class="logoImg">
+                    <img src="../../src/asset/icon/computet_icon.png" />
+                </div>
+                <a href="../main/mainPage.html">
+                    <div class="title">DANAONDA SHOP</div>
+                </a>
+                <div class="login_register_box">
+                    <a href="../register/loginPage.html" class="login">로그인</a>
+                    <div class="vertical_devider"></div>
+                    <a href="../register/register.html" class="login">회원가입</a>
                 </div>
             </div>
-        </div>
-        <div class="side_listDiv">
-            <div class="sideBar">
-                <div class="dropdown">
-                    <button onclick="PC_MainParts()" class="button">PC주요부품</button>
-                    <div style="display: none;" id="PC_Main_drop_content">
-                        <a hreaf='#'>CPU</a>
-                        <a hreaf='#'>메인보드</a>
-                        <a hreaf='#'>메모리</a>
-                        <a hreaf='#'>그래픽카드</a>
-                        <a hreaf='#'>SSD/HDD</a>
-                        <a hreaf='#'>케이스</a>
-                        <a hreaf='#'>키보드/마우스</a>
+        </header>
+        <hr />
+        <main>
+            <div class="navBar">
+                <div class="search_sortDiv_navBox"></div>
+                <div class="search_sortDiv">
+                    <div class="searchItemBox">
+                        <input type="button" value="상품검색" />
+                        <input type="search" name="" id="searchItem" />
                     </div>
-                    <button onclick="PC_SubParts()" class="button">PC주변부품</button>
-                    <div style="display: none;" id="PC_Sub_drop_content">
-                        <a hreaf='#'>모니터</a>
-                        <a hreaf='#'>스피커</a>
-                        <a hreaf='#'>쿨러</a>
-                        <a hreaf='#'>프린트</a>
+                    <div class="sortOptionBox">
+                        <select name="" id="sort">
+                            <option value="newest">최신순</option>
+                            <option value="price">가격순</option>
+                            <option value="favorite">인기순</option>
+                        </select>
                     </div>
                 </div>
             </div>
-            <div class="productList">
-                <div class="array">
-                    <div class="item">
-                        <div class="thumbnail">
-                            <img src="" />
+            <div class="side_listDiv">
+                <div class="sideBar">
+                    <div class="dropdown">
+                        <button onclick="PC_MainParts()" class="button">PC주요부품</button>
+                        <div style="display: none" id="PC_Main_drop_content">
+                            <a href="../products/productListPage.html">CPU</a>
+                            <a href="../products/productListPage.html">메인보드</a>
+                            <a href="../products/productListPage.html">메모리</a>
+                            <a href="../products/productListPage.html">그래픽카드</a>
+                            <a href="../products/productListPage.html">SSD/HDD</a>
+                            <a href="../products/productListPage.html">케이스</a>
+                            <a href="../products/productListPage.html">키보드/마우스</a>
                         </div>
-                        <div class="product_information">
-                            <div class="name">상품이름: 상품이름</div>
-                            <div class="description">상품설명: 상품설명</div>
-                            <div class="amount">상품가격: 100,000</div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="thumbnail">
-                            <img src="" />
-                        </div>
-                        <div class="product_information">
-                            <div class="name">상품이름: 상품이름</div>
-                            <div class="description">상품설명: 상품설명</div>
-                            <div class="amount">상품가격: 100,000</div>
+                        <button onclick="PC_SubParts()" class="button">PC주변부품</button>
+                        <div style="display: none" id="PC_Sub_drop_content">
+                            <a href="../products/productListPage.html">모니터</a>
+                            <a href="../products/productListPage.html">스피커</a>
+                            <a href="../products/productListPage.html">쿨러</a>
+                            <a href="../products/productListPage.html">프린트</a>
                         </div>
                     </div>
+                </div>
+                <div class="productList">
+                    <div class="array">
+                        <div class="item">
+                            <div class="thumbnail">
+                                <img src="" />
+                            </div>
+                            <div class="product_information">
+                                <div class="name">상품이름: 상품이름</div>
+                                <div class="description">상품설명: 상품설명</div>
+                                <div class="amount">상품가격: 100,000</div>
+                            </div>
+                        </div>
 
-                    <div class="item">
-                        <div class="thumbnail">
-                            <img src="" />
+                        <div class="item">
+                            <div class="thumbnail">
+                                <img src="" />
+                            </div>
+                            <div class="product_information">
+                                <div class="name">상품이름: 상품이름</div>
+                                <div class="description">상품설명: 상품설명</div>
+                                <div class="amount">상품가격: 100,000</div>
+                            </div>
                         </div>
-                        <div class="product_information">
-                            <div class="name">상품이름: 상품이름</div>
-                            <div class="description">상품설명: 상품설명</div>
-                            <div class="amount">상품가격: 100,000</div>
-                        </div>
-                    </div>
 
-                    <div class="item">
-                        <div class="thumbnail">
-                            <img src="" />
+                        <div class="item">
+                            <div class="thumbnail">
+                                <img src="" />
+                            </div>
+                            <div class="product_information">
+                                <div class="name">상품이름: 상품이름</div>
+                                <div class="description">상품설명: 상품설명</div>
+                                <div class="amount">상품가격: 100,000</div>
+                            </div>
                         </div>
-                        <div class="product_information">
-                            <div class="name">상품이름: 상품이름</div>
-                            <div class="description">상품설명: 상품설명</div>
-                            <div class="amount">상품가격: 100,000</div>
-                        </div>
-                    </div>
 
-                    <div class="item">
-                        <div class="thumbnail">
-                            <img src="" />
+                        <div class="item">
+                            <div class="thumbnail">
+                                <img src="" />
+                            </div>
+                            <div class="product_information">
+                                <div class="name">상품이름: 상품이름</div>
+                                <div class="description">상품설명: 상품설명</div>
+                                <div class="amount">상품가격: 100,000</div>
+                            </div>
                         </div>
-                        <div class="product_information">
-                            <div class="name">상품이름: 상품이름</div>
-                            <div class="description">상품설명: 상품설명</div>
-                            <div class="amount">상품가격: 100,000</div>
-                        </div>
-                    </div>
 
-                    <div class="item">
-                        <div class="thumbnail">
-                            <img src="" />
+                        <div class="item">
+                            <div class="thumbnail">
+                                <img src="" />
+                            </div>
+                            <div class="product_information">
+                                <div class="name">상품이름: 상품이름</div>
+                                <div class="description">상품설명: 상품설명</div>
+                                <div class="amount">상품가격: 100,000</div>
+                            </div>
                         </div>
-                        <div class="product_information">
-                            <div class="name">상품이름: 상품이름</div>
-                            <div class="description">상품설명: 상품설명</div>
-                            <div class="amount">상품가격: 100,000</div>
+
+                        <div class="item">
+                            <div class="thumbnail">
+                                <img src="" />
+                            </div>
+                            <div class="product_information">
+                                <div class="name">상품이름: 상품이름</div>
+                                <div class="description">상품설명: 상품설명</div>
+                                <div class="amount">상품가격: 100,000</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-    <footer>
+        </main>
+        <footer></footer>
 
-    </footer>
-
-
-    <script>
-        function PC_MainParts() {
-            let click = document.getElementById("PC_Main_drop_content");
-            if (click.style.display === "none") {
-                click.style.display = "block";
-
-            } else {
-                click.style.display = "none";
-
+        <script>
+            function PC_MainParts() {
+                let click = document.getElementById('PC_Main_drop_content');
+                if (click.style.display === 'none') {
+                    click.style.display = 'block';
+                } else {
+                    click.style.display = 'none';
+                }
             }
-        }
-        function PC_SubParts() {
-            let click = document.getElementById("PC_Sub_drop_content");
-            if (click.style.display === "none") {
-                click.style.display = "block";
-
-            } else {
-                click.style.display = "none";
-
+            function PC_SubParts() {
+                let click = document.getElementById('PC_Sub_drop_content');
+                if (click.style.display === 'none') {
+                    click.style.display = 'block';
+                } else {
+                    click.style.display = 'none';
+                }
             }
-        }
-    </script>
-
-</body>
-
+        </script>
+    </body>
 </html>
