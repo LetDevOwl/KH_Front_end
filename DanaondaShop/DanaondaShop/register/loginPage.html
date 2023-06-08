@@ -1,46 +1,44 @@
 <!DOCTYPE html>
 <html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>로그인 페이지</title>
+        <link rel="stylesheet" href="./css/loginPagCss.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>로그인 페이지</title>
-    <link rel="stylesheet" href="./css/loginPagCss.css" />
-</head>
-
-<body>
-    <div class="container">
-        <header>
-            <div class="header">
-                <div class="logoImg">
-                    <img src="../../src/asset/icon/computet_icon.png" />
+    <body>
+        <div class="container">
+            <header>
+                <div class="header">
+                    <div class="logoImg">
+                        <img src="../../src/asset/icon/computet_icon.png" />
+                    </div>
+                    <a href="../main/mainPage.html">
+                        <div class="title">DANAONDA SHOP</div>
+                    </a>
                 </div>
-                <div class="title">DANAONDA SHOP</div>
+            </header>
+            <div class="auto_login_field"><input type="checkbox" class="auto_login" />자동 로그인</div>
+            <div class="login_field">
+                <div class="id_field">
+                    <input type="text" id="user_id" placeholder="아이디" />
+                </div>
+                <div class="pw_field">
+                    <input type="text" id="user_pw" placeholder="비밀번호" />
+                </div>
+                <button class="loginBtn">로그인</button>
             </div>
-        </header>
-        <div class="auto_login_field">
-            <input type="checkbox" class="auto_login" />자동 로그인
-        </div>
-        <div class="login_field">
-            <div class="id_field">
-                <input type="text" id="user_id" placeholder="아이디" />
+            <div class="login_footer">
+                <a href="./register.html">회원가입</a>
+                <div class="vertical_devider"></div>
+                <a href="./searchId.html">아이디 패스워드 찾기</a>
             </div>
-            <div class="pw_field">
-                <input type="text" id="user_pw" placeholder="비밀번호" />
-            </div>
-            <button class="loginBtn">로그인</button>
-        </div>
-        <div class="login_footer">
-            <a href="./register.html">회원가입</a>
-            <div class="vertical_devider"></div>
-            <a href="./searchId.html">아이디 패스워드 찾기</a>
-        </div>
 
-        <footer>
-            <div></div>
-        </footer>
-    </div>
-</body>
-
+            <footer>
+                <div></div>
+            </footer>
+        </div>
+    </body>
 </html>

@@ -1,66 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>회원가입</title>
+        <link rel="stylesheet" href="./css/registerCss.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입</title>
-    <link rel="stylesheet" href="./css/registerCss.css">
-</head>
-
-<body>
-    <div class="container">
-        <header>
-            <div class="header">
-                <div class="logo">
-                    <div class="logoImg">
-                        <img src="../../src/asset/icon/computet_icon.png" />
+    <body>
+        <div class="container">
+            <header>
+                <div class="header">
+                    <div class="logo">
+                        <div class="logoImg">
+                            <img src="../../src/asset/icon/computet_icon.png" />
+                        </div>
+                        <a href="../main/mainPage.html">
+                            <div class="logoTitle">DANAONDA SHOP</div>
+                        </a>
                     </div>
-                    <div class="logoTitle">DANAONDA SHOP</div>
+                    <div class="title">
+                        <h1>회원가입</h1>
+                    </div>
                 </div>
-                <div class="title">
-                    <h1>회원가입</h1>
+            </header>
+            <main>
+                <div class="userInfo_Field">
+                    <div class="user_id">
+                        <input type="text" name="" id="user_id" placeholder="아이디" />
+                    </div>
+                    <div class="user_pw">
+                        <input type="text" name="" id="user_pw" placeholder="비밀번호" />
+                    </div>
+                    <div class="email">
+                        <input type="email" name="" id="email" placeholder="이메일" />
+                    </div>
+                    <div class="nickname">
+                        <input type="text" name="" id="nickname" placeholder="닉네임" />
+                    </div>
+                    <div class="name">
+                        <input type="text" name="" id="name" placeholder="이름" />
+                    </div>
+                    <div class="tel">
+                        <input type="tel" name="" id="tel" placeholder="전화번호" />
+                    </div>
+                    <div class="gender">
+                        <input type="radio" name="gender" id="male" checked />
+                        <label for="male">남자</label>
+                        <input type="radio" name="gender" id="female" />
+                        <label for="female">여자</label>
+                    </div>
+                    <div class="registerBtn">
+                        <input type="submit" value="회원가입" />
+                    </div>
                 </div>
-            </div>
-        </header>
-        <main>
-            <div class="userInfo_Field">
-                <div class="user_id">
-                    <input type="text" name="" id="user_id" placeholder="아이디">
-                </div>
-                <div class="user_pw">
-                    <input type="text" name="" id="user_pw" placeholder="비밀번호">
-                </div>
-                <div class="email">
-                    <input type="email" name="" id="email" placeholder="이메일">
-                </div>
-                <div class="nickname">
-                    <input type="text" name="" id="nickname" placeholder="닉네임">
-                </div>
-                <div class="name">
-                    <input type="text" name="" id="name" placeholder="이름">
-                </div>
-                <div class="tel">
-                    <input type="tel" name="" id="tel" placeholder="전화번호">
-                </div>
-                <div class="gender">
-                    <input type="radio" name="gender" id="male" checked>
-                    <label for="male">남자</label>
-                    <input type="radio" name="gender" id="female">
-                    <label for="female">여자</label>
-                </div>
-                <div class="registerBtn">
-                    <input type="submit" value="회원가입">
-                </div>
-            </div>
-        </main>
-        <footer>
-            <div class="footer">
-
-            </div>
-        </footer>
-    </div>
-</body>
-
+            </main>
+            <footer>
+                <div class="footer"></div>
+            </footer>
+        </div>
+    </body>
 </html>

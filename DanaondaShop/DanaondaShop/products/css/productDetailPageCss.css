@@ -58,24 +58,29 @@
     display: flex;
     margin-top: 40px;
     gap: 40px;
+    justify-content: space-evenly;
 }
 .productDetailDiv {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 800px;
     height: auto;
-    background-color: aqua;
+    /* background-color: aqua; */
     gap: 100px;
-    /* justify-content: center; */
     align-items: center;
 }
 .productImg {
     display: flex;
 }
 
+.buyDivWrapper {
+    max-width: 500px;
+    height: auto;
+}
 .buyDiv {
-    width: calc(100vw - 400px);
-    max-height: 500px;
+    position: sticky;
+    padding: 20px;
+    top: 80px;
     background-color: #ccc;
 }
 .buyDiv hr {
