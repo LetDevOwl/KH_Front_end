@@ -132,7 +132,30 @@
     flex-direction: row;
     justify-content: space-around;
 }
-
+button.buyBtn {
+    align-self: center;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(123, 49, 245);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button.saveBtn {
+    align-self: center;
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 /* -------------------------- 메뉴바 CSS ------------------------ */
 
 body {

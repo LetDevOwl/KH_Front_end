@@ -28,7 +28,7 @@
                 <div class="pw_field">
                     <input type="text" id="user_pw" placeholder="비밀번호" />
                 </div>
-                <button class="loginBtn">로그인</button>
+                <button onclick="loginEvent();" class="loginBtn">로그인</button>
             </div>
             <div class="login_footer">
                 <a href="./register.html">회원가입</a>
@@ -40,5 +40,12 @@
                 <div></div>
             </footer>
         </div>
+
+        <script>
+            function loginEvent() {
+                alert('로그인이 완료되었습니다.');
+                location.href = '../main/mainPage.html';
+            }
+        </script>
     </body>
 </html>

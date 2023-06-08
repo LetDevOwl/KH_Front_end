@@ -52,7 +52,9 @@
                         <label for="female">여자</label>
                     </div>
                     <div class="registerBtn">
-                        <input type="submit" value="회원가입" />
+                        <!-- <a href="./loginPage.html"> -->
+                        <input type="submit" onclick="SubmitEvent();" value="회원가입" />
+                        <!-- </a> -->
                     </div>
                 </div>
             </main>
@@ -60,5 +62,13 @@
                 <div class="footer"></div>
             </footer>
         </div>
+
+        <script>
+            var inputTags = document.querySelector('[type=text]');
+            function SubmitEvent() {
+                alert('회원가입이 완료되었습니다');
+                location.href = './loginPage.html';
+            }
+        </script>
     </body>
 </html>
