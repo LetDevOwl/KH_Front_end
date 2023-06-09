@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 실습</title>
+    <style>
+        div {
+            width: 100px;
+            border: 1px solid #ccc;
+            display: inline-block;
+            padding: 0 20px 30px 20px;
+            line-height: 2;
+            margin: 15px;
+        }
+
+        div h3 {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>구구단</h1>
+    <script>
+        // var inputDan = prompt("단 수를 입력하세요");
+        // if (inputDan == 3) {
+        //     document.write("<h3>3단<h3>")
+        // }
+        // document.write("<h3>2단<h3>")
+        // for (var i = 1; i < 10; i++) {
+        //     document.write("2 * " + i + " = " + 2 * i + "<br>")
+        // }
+        // document.write("<h3>3단<h3>")
+        // for (var i = 1; i < 10; i++) {
+        //     document.write("3 * " + i + " = " + 3 * i + "<br>")
+        // }
+        // document.write("<h3>4단<h3>")
+        // for (var i = 1; i < 10; i++) {
+        //     document.write("4 * " + i + " = " + 4 * i + "<br>")
+        // }
+        // document.write("<h3>5단<h3>")
+        // for (var i = 1; i < 10; i++) {
+        //     document.write("5 * " + i + " = " + 5 * i + "<br>")
+        // }
+        // document.write("<h3>6단<h3>")
+        // for (var i = 1; i < 10; i++) {
+        //     document.write("6 * " + i + " = " + 6 * i + "<br>")
+        // }
+        // document.write("<h3>7단<h3>")
+        // for (var i = 1; i < 10; i++) {
+        //     document.write("7 * " + i + " = " + 7 * i + "<br>")
+        // }
+        // document.write("<h3>8단<h3>")
+        // for (var i = 1; i < 10; i++) {
+        //     document.write("8 * " + i + " = " + 8 * i + "<br>")
+        // }
+        // document.write("<h3>9단<h3>")
+        // for (var i = 1; i < 10; i++) {
+        //     document.write("9 * " + i + " = " + 9 * i + "<br>")
+        // }
+        // for (var j = 2; j < 10; j++) {
+        //     document.write("<h3>" + j + "단</h3>")
+        //     for (var i = 1; i < 10; i++) {
+        //         document.write(j + " * " + i + " = " + i * j + "<br>");
+        //     }
+        // }
+        for (var i = 1; i < 10; i++) {
+            if (i === 8) {
+                // continue;
+                // break;
+            }
+            document.write("<div>");
+            document.write("<h3>" + i + "단</h3>");
+            for (var j = 1; j < 10; j++) {
+                document.write(i + " * " + j + " = " + j * i + "<br>");
+            }
+            document.write("</div>");
+        }
+    </script>
+
+</body>
+
+</html>

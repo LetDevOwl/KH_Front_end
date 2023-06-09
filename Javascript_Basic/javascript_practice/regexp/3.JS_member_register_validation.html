@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <style>
+        .container {
+            width: 550px;
+            margin: 0 auto;
+
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul>li {
+            line-height: 2;
+        }
+
+        ul>li>label {
+            width: 100px;
+            float: left;
+        }
+
+        .form-btn {
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 20px;
+        }
+
+        .form-btn input {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 0 10px;
+        }
+
+        .message {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector("form").addEventListener("submit", (e) => {
+                // 화면 출력
+                const msgTag = document.querySelector("#message");
+                msgTag.style.color = "red";
+                msgTag.style.fontWeight = "bolder";
+                // 입력값 가져오기
+                const userId = document.querySelector("#user-id").value;
+                const userPw = document.querySelector("#pw").value;
+                const userPwRe = document.querySelector("#pw-re").value;
+                const userName = document.querySelector("#user-name").value;
+                const userAddr = document.querySelector("#addr").value;
+                const post1 = document.querySelector("#post-1").value;
+                const post2 = document.querySelector("#post-2").value;
+                const userEmail = document.querySelector("#email").value;
+                // 정규표현식
+                const idRegExp = /^[a-z][a-z0-9]{3,11}$/g;
+                const pwRegExp = /^[a-zA-Z0-9]{8,12}$/g;
+                const nameRegExp = /^[가-힣]+$/g;
+                const addrRegExp = /[a-zA-Z]+$/gm;
+                const postNumRegExp = /^[0-9]+$/g;
+                const emailRegExp = /[a-zA-Z0-9]{4,12}@[a-z]+\.[a-z]{3}/g;
+
+                if (!idRegExp.test(userId)) {
+                    // 1. ID는 영어소문자, 숫자만 가능해야함(4~12자리, 소문자로 시작해야함)
+                    e.preventDefault();
+                    msgTag.innerText = "ID는 영어소문자,숫자만 가능해야하고 소문자로 시작하고 4~12자리여야 함.";
+                    // alert("ID는 영어소문자,숫자만 가능해야하고 소문자로 시작하고 4~12자리여야 함.")
+                } else if (!pwRegExp.test(userPw)) {
+                    //2. PW는 영어소문자, 대문자, 숫자만 입력 가능해야 하고(최소 8~12자리)
+                    e.preventDefault();
+                    msgTag.innerText = "PW는 영어소문자,대문자,숫자만 입력 가능해야 하고 최소 8~12자리여야함."
+                    // alert("PW는 영어소문자,대문자,숫자만 입력 가능해야 하고 최소 8~12자리여야함.")
+                } else if (userPw !== userPwRe) {
+                    // 3. PW와 PW - re는 같아야 함
+                    e.preventDefault();
+                    msgTag.innerText = "비밀번호가 일치하지 않습니다.";
+                } else if (!nameRegExp.test(userName)) {
+                    // 4. NAME은 무조건 한글만 가능해야 함(최소1글자 이상)
+                    e.preventDefault();
+                    msgTag.innerText = "NAME은 무조건 한글만 가능해야 함(최소1글자 이상)";
+                } else if (addrRegExp.test(userAddr)) {
+                    // 5. 주소에는 영어 사용 불가(공백 불가)
+                    e.preventDefault();
+                    msgTag.innerText = "주소에는 영어 사용 불가(공백 불가)";
+                } else if (!postNumRegExp.test(post1) && !postNumRegExp.test(post2)) {
+                    e.preventDefault();
+                    msgTag.innerText = "우편번호는 무조건 숫자만 입력 가능해야 함";
+                } else if (!emailRegExp.test(userEmail)) {
+                    e.preventDefault();
+                    msgTag.innerText = "이메일은 @가 포함 되어야 함(@앞에가 영문자,숫자로 4~12글자 )";
+                }
+            })
+        })
+    </script>
+    <div class="container">
+        문제<br>
+        회원가입시 각 필드마다 유효성 검사를 하여 처리 할 수 있도록 만들어라. <br>
+        1. ID는 영어소문자,숫자만 가능해야함(4~12자리,소문자로 시작해야함) <br>
+        2. PW는 영어소문자,대문자,숫자만 입력 가능해야 하고 (최소 8~12자리) <br>
+        3. PW와 PW-re는 같아야 함<br>
+        4. NAME은 무조건 한글만 가능해야 함(최소1글자 이상)<br>
+        5. 주소에는 영어 사용 불가(공백 불가)<br>
+        6. 우편번호는 무조건 숫자만 입력 가능해야 함<br>
+        7. 이메일은 @가 포함 되어야 함(@앞에가 영문자,숫자로 4~12글자 ) <br>
+        8. 전화번호는 첫번째 필드는 010만 입력 가능 해야 함 <br>
+        두번째 필드는 3자리 이상 입력 해야 함 <br>
+        세번째 필드는 무조건 4자리 입력 해야함 <br>
+        (모두 숫자만 가능 해야함) <br>
+        <br>
+        <div class="member-form">
+            <form action="result.html" method="get">
+                <fieldset>
+                    <legend>회원가입</legend>
+                    <span id="message" class="message"></span>
+                    <ul>
+                        <li>
+                            <label>ID : </label><input type="text" id="user-id">
+                        </li>
+                        <li>
+                            <label>PW : </label><input type="password" id="pw">
+                        </li>
+                        <li>
+                            <label>PW-re : </label><input type="password" id="pw-re">
+                        </li>
+                        <li>
+                            <label>NAME : </label><input type="text" id="user-name">
+                        </li>
+                        <li>
+                            <label>ADDRESS : </label><input type="text" id="addr">
+                        </li>
+                        <li>
+                            <label>POST-NUM: </label> <input type="text" size="5" id="post-1"> - <input type="text"
+                                size="5" id="post-2">
+                        </li>
+                        <li>
+                            <label>E-MAIL : </label><input type="text" id="email"><br>
+                        </li>
+                        <li>
+                            <label>PHONE : </label><input type="text" id="tel1" size="2" maxlength="3">-<input
+                                type="text" id="tel2" size="2" maxlength="4">-<input type="text" id="tel3" size="2"
+                                maxlength="4"><br>
+                        </li>
+                    </ul>
+
+                    <div class="form-btn">
+                        <input type="submit" value="회원가입" /><input type="reset" value="취소">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br>
+</body>
+
+</html>

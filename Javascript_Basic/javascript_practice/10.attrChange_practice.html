@@ -32,9 +32,11 @@
     <script>
         function colorChange() {
             //컬러 뽑기
-            var colorValue = document.querySelector("[type=color]").value;
+            // var colorValue = document.querySelector("[type=color]").value;
+            var colorValue = $("[type=color]").val();
             //div 색칠하기
-            document.querySelector("#div1").style.backgroundColor = colorValue;
+            // document.querySelector("#div1").style.backgroundColor = colorValue;
+            $("#div1").css("background-color", colorVal);
         }
         // style.width, style.height
         var divTag2 = document.querySelector("#div2");

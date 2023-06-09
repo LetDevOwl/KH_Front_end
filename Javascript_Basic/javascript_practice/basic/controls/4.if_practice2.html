@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제 4</title>
+    <style>
+        div {
+            /* border: 1px solid black; */
+            text-align: center;
+        }
+
+        div h3 {
+            font-size: 30px;
+        }
+
+        #for {
+            font-size: 25px;
+        }
+
+        #footer {
+            color: red;
+            font-size: 25px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3>3의 배수 찾기</h3>
+    </div>
+    <div>
+        <script>
+            var inputNum = prompt("몇 까지 3의 배수를 찾을까요?", "100");
+            var count = 0;
+            document.write("<div id='for'>");
+            for (var i = 1; i <= inputNum; i++) {
+                if (i % 3 === 0) {
+                    document.write(i + ", ");
+                    // 3의 배수를 찾았을 때에만 +1이 되어야 함.
+                    // 다항연산자
+                    count++;
+                }
+            }
+            document.write("</div>");
+            document.write("<div id='footer'>");
+            document.write("<p>" + inputNum + "까지 3의 배수의 갯수 : " + count + "</p>");
+            document.write("</div>");
+        </script>
+    </div>
+</body>
+
+</html>

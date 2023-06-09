@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript ES6</title>
+</head>
+
+<body>
+    <h1>Javascript ES6</h1>
+    <p>
+        변수의 호이스팅, 선언되지 않은 변수를 사용하더라도 자동으로 선언하여 사용하는 현상
+    </p>
+    <script>
+        const sayHelloFriend = (name) => {
+            console.log(name + "안녕?");
+        }
+        sayHelloFriend("일용자");
+        // let sayHi = function() { return "안녕하세요?" };
+        let sayHi = () => "안녕하세요?";
+        console.log(sayHi());
+
+        const printMember = () => {
+            console.log("멤버를 출력함.");
+        }
+        printMember();
+
+        const insertMember = () => {
+            console.log("const로 선언한 변수에 초기화");
+        }
+        insertMember();
+        // insertMember = 1;
+
+        function exConst() {
+            const PI = 3.14; // 호이스팅은 가능 하나 값 선언을 하지 않으면 사용 불가능
+            console.log(PI);
+            PI = 3.24 // 상수는 값 선언 이후 다시 선언 불가능
+            console.log(PI);
+        }
+
+        function letForLoop() {
+            for (let i = 1; i <= 5; i++) {
+                console.log(i);
+            }
+            console.log(i); // Uncaught ReferenceError: Cannot access 'PI' before initialization
+        }
+
+        function varForLoop() {
+            // var i;
+            for (var i = 1; i <= 5; i++) {
+                console.log(i);
+            }
+            console.log(i);
+        }
+
+        exLet();
+        function exLet() {
+            // Uncaught ReferenceError: Cannot access 'number' before initialization
+            let number;     // undefind
+            console.log(number);
+            number = 2;
+            console.log(number);
+        }
+
+        function varHoisting() {
+            console.log(number);
+            var number; // undefind
+            number = 1  // 1
+        }
+    </script>
+</body>
+
+</html>
